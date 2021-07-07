@@ -1,0 +1,66 @@
+.login-container{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    border-radius: 8px;
+    width: 30%;
+}
+
+.login-form{
+    padding: 5%;
+    background: #4583c5;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 8px;
+}
+
+.login-form h3{
+    text-align: center;
+    color: #fff;
+}
+
+.uil-arrow-left{
+    font-size: 2rem;
+    text-align: justify!important;
+    color: white;
+    display: inline;
+    transition: 600ms;
+}
+
+.uil-arrow-left:hover{
+    cursor: pointer;
+    font-size: 2.5rem;
+    transition: 600ms;
+}
+
+.login-container form{
+    padding: 5%;
+}
+
+.btnSubmit{
+    width: 50%;
+    border-radius: 0.5rem;
+    padding: 1.5%;
+    border: none;
+    cursor: pointer;
+    transition: 600ms;
+}
+
+.btnSubmit:hover{
+    background: #4583c5!important;
+    color: white!important;
+    border: 1.5px solid white;
+    transition: 600ms;
+    padding: 1rem;
+}
+
+.login-form .btnSubmit{
+    font-weight: 600;
+    color: #4583c5;
+    background-color: #fff;
+}
+
+.login-form .RegisterPwd{
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+}
+

@@ -1,0 +1,41 @@
+version: "3"
+
+services: 
+  localhost:
+    image: mysql
+    container_name: nouvenDb
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: ok
+      MYSQL_ROOT_USERNAME: root
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: nouvenn_test
+      MYSQL_ROOT_HOST: localhost
+    ports:
+      - "3306:3306"
+    volumes:
+      - .:/usr/localhost
+
+  back:
+    build: ./backend
+    container_name: backend
+    volumes: 
+      - .:/home/node/app
+    entrypoint: ./backend/docker/entrypoint.sh
+    ports:
+      - 3000:3000
+    depends_on:
+      - localhost
+  
+  front:
+    build: ./frontend
+    container_name: frontend
+    stdin_open: true
+    volumes: 
+      - .:/home/node/app
+    entrypoint: ./frontend/docker/entrypoint.sh
+    ports:
+      - 4200:4200
+    depends_on:
+      - localhost
+      
+    
