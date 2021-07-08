@@ -37,6 +37,7 @@ export class PerfilComponent implements OnInit {
       this.getAllBooks(this.routeFlagTwo);
       this.name = this.routeFlagTwo;
       this.nameUser = localStorage.getItem("myUser")
+      console.log(this.nameUser)
     }
   }
 
@@ -80,7 +81,7 @@ export class PerfilComponent implements OnInit {
       disponibily.emprestado = localStorage.getItem("userName");
       this.bookSvc.alterDisponibilidade(disponibily).subscribe(
         result => {
-          this.getAllBooks(this.routeFlag);
+
         }
       )
     }
@@ -91,7 +92,7 @@ export class PerfilComponent implements OnInit {
         disponibily.emprestado = 'Nobody';
         this.bookSvc.alterDisponibilidade(disponibily).subscribe(
           result => {
-            this.getAllBooks(this.routeFlag);
+
           }
         )
       }
