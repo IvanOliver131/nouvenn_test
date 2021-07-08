@@ -65,20 +65,28 @@ https://sourceforge.net/projects/wampserver/
 3: abra a pasta "nouvenn_test" no terminal e rode o seguinte comando para subir o banco da aplicação:
 
 	docker-compose up --build;
+	
+![image](https://user-images.githubusercontent.com/62350674/124854587-ecb31f00-df7d-11eb-87ee-9b6557f86015.png)
 
 4: abra a pasta "backend" no terminal e rode os seguintes comandos:
 	
 	yarn;
 	yarn typeorm migration:run;
 	yarn dev;
+
+![image](https://user-images.githubusercontent.com/62350674/124854648-048aa300-df7e-11eb-88eb-70d21695d8da.png)
 	
 5: abra a pasta frontend no terminal e rodar os seguintes comandos:
 	
 	npm i;
 	ng s;
+
+![image](https://user-images.githubusercontent.com/62350674/124854719-271cbc00-df7e-11eb-9ba8-5b88c234987e.png)
 	
 6: para descer os containers e limpar o docker digite o seguinte comando:
 	
 	docker-compose down;
+	
+
 	
 	
