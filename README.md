@@ -16,6 +16,15 @@
 
 3: instalar o angular/cli, nodejs e o wampserver para rodar o banco e migration localmente.
 
+https://classic.yarnpkg.com/en/docs/install/#windows-stable
+
+https://nodejs.org/en/
+
+https://angular.io/cli
+
+https://sourceforge.net/projects/wampserver/
+
+
 4: crie um arquivo .env dentro da pasta "backend" e coloque os seus dados como no exemplo:
 
 ![image](https://user-images.githubusercontent.com/62350674/123447096-de452a80-d5af-11eb-914d-0aee9a40a101.png)
