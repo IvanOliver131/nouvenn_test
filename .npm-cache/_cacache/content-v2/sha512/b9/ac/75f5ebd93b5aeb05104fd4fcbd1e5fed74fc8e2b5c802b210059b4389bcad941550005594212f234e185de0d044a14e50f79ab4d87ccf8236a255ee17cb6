@@ -1,0 +1,1 @@
+{"name":"parent-require","dist-tags":{"latest":"1.0.0"},"versions":{"1.0.0":{"name":"parent-require","version":"1.0.0","devDependencies":{"mocha":"1.x.x","chai":"1.x.x"},"dist":{"shasum":"746a167638083a860b0eef6732cb27ed46c32977","tarball":"https://registry.npmjs.org/parent-require/-/parent-require-1.0.0.tgz"},"engines":{"node":">= 0.4.0"}}},"modified":"2013-08-12T18:35:45.169Z"}
