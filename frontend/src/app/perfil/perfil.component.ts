@@ -37,7 +37,6 @@ export class PerfilComponent implements OnInit {
       this.getAllBooks(this.routeFlagTwo);
       this.name = this.routeFlagTwo;
       this.nameUser = localStorage.getItem("myUser")
-      console.log(this.nameUser)
     }
   }
 
