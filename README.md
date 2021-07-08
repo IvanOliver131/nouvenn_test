@@ -12,13 +12,13 @@
 3: adicionar um schema no workbench com o nome nouvenn_test.
 
 ![image](https://user-images.githubusercontent.com/62350674/124848910-2aab4580-df74-11eb-8cd4-4291aeb8ed05.png)
+![image](https://user-images.githubusercontent.com/62350674/124848962-3e56ac00-df74-11eb-8751-2270017f4213.png)
 
 3: instalar o angular/cli, nodejs e o wampserver para rodar o banco e migration localmente.
 
 4: crie um arquivo .env dentro da pasta "backend" e coloque os seus dados como no exemplo:
 
 ![image](https://user-images.githubusercontent.com/62350674/123447096-de452a80-d5af-11eb-914d-0aee9a40a101.png)
-![image](https://user-images.githubusercontent.com/62350674/124848962-3e56ac00-df74-11eb-8751-2270017f4213.png)
 
 5: informe tambem estes dados dentro do arquivo "ormconfig.json" da pasta "backend"
 
