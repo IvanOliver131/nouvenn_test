@@ -27,7 +27,7 @@ https://sourceforge.net/projects/wampserver/
 
 4: crie um arquivo .env dentro da pasta "backend" e coloque os seus dados como no exemplo:
 
-![image](https://user-images.githubusercontent.com/62350674/123447096-de452a80-d5af-11eb-914d-0aee9a40a101.png)
+![image](https://user-images.githubusercontent.com/62350674/124854859-64814980-df7e-11eb-98e4-0d1b2c4ec455.png)
 
 5: informe tambem estes dados dentro do arquivo "ormconfig.json" da pasta "backend"
 
