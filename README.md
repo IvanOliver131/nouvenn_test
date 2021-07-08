@@ -60,11 +60,13 @@ https://sourceforge.net/projects/wampserver/
 
 1: intale o Docker;
 
-2: abra a pasta "nouvenn_test" no terminal e rode o seguinte comando para subir a aplicação:
+2: abra o Docker;
+
+3: abra a pasta "nouvenn_test" no terminal e rode o seguinte comando para subir a aplicação:
 
 	docker-compose up --build;
-
-3: para descer os containers e limpar o docker digite o seguinte comando:
+	
+4: para descer os containers e limpar o docker digite o seguinte comando:
 	
 	docker-compose down;
 	
