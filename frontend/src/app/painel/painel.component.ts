@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 //import { Router } from '@angular/router';
 import { BookService } from '../service/book/book.service';
+import { UserService } from '../service/user/user.service';
 import { Book } from '../shared/book';
+import { User } from '../shared/user';
 
 @Component({
   selector: 'app-painel',
@@ -12,13 +14,17 @@ export class PainelComponent implements OnInit {
   public book: Book = new Book();
   public allBookLst: Array<Book> = new Array<Book>();
   public myBookLst: Array<Book> = new Array<Book>();
+  public myUser: any;
+  public userLst: Array<User> = new Array<User>();
 
   constructor(
     private bookSvc: BookService,
+    private userSvc: UserService
   ) {
   }
 
   ngOnInit(): void {
+    this.getAllUsers();
     this.getMyBooks();
   }
 
@@ -67,6 +73,22 @@ export class PainelComponent implements OnInit {
           }
           i++;
         })
+      });
+  }
+
+  getAllUsers() {
+    console.log(localStorage.getItem("userName"))
+    this.userSvc.getAllUsers().subscribe(
+      result => {
+        this.userLst = result
+        let i = 0;
+        this.userLst.forEach((u) => {
+          if (u.email === localStorage.getItem("userName")) {
+            this.myUser = localStorage.setItem("myUser", this.userLst[i].username);
+          }
+          i++;
+        })
+
       });
   }
 

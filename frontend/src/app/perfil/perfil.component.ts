@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { BookService } from '../service/book/book.service';
 import { UserService } from '../service/user/user.service';
 import { Book } from '../shared/book';
+import { User } from '../shared/user';
 
 @Component({
   selector: 'app-perfil',
@@ -16,24 +17,26 @@ export class PerfilComponent implements OnInit {
   public routeFlag: any;
   public routeFlagTwo: any;
   public name: any;
+  public nameUser: any;
+  public userLst: Array<User> = new Array<User>();
 
   constructor(
     private bookSvc: BookService,
+    private userSvc: UserService,
     public actRoute: ActivatedRoute,
   ) { }
 
   ngOnInit(): void {
     this.routeFlag = this.actRoute.snapshot.paramMap.get("otherName");
     this.routeFlagTwo = this.actRoute.snapshot.paramMap.get("userName");
-    console.log(localStorage.getItem("userId"))
     if (this.routeFlag) {
-      //const [, match] = this.name.match(/(\S+) /) || [];
-      this.name = this.routeFlag;
+      this.getAllUsers(this.routeFlag);
       this.getAllBooks(this.routeFlag);
     }
     else {
       this.getAllBooks(this.routeFlagTwo);
       this.name = this.routeFlagTwo;
+      this.nameUser = localStorage.getItem("myUser")
     }
   }
 
@@ -49,6 +52,21 @@ export class PerfilComponent implements OnInit {
           }
           i++;
         })
+      });
+  }
+
+  getAllUsers(aux: any) {
+    this.userSvc.getAllUsers().subscribe(
+      result => {
+        this.userLst = result
+        let i = 0;
+        this.userLst.forEach((u) => {
+          if (u.email === aux) {
+            localStorage.setItem("myUserHere", this.userLst[i].username);
+          }
+          i++;
+        })
+        this.nameUser = localStorage.getItem("myUserHere")
       });
   }
 

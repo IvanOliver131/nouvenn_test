@@ -9,9 +9,10 @@ import BookController from "./app/controllers/BookController";
 const router = Router();
 
 router.post('/users', UserController.store);
+router.get('/users', UserController.read);
 router.post('/auth', AuthController.authenticate);
 router.post('/books', BookController.store);
-router.put('/books', BookController.update)
+router.put('/books', BookController.update);
 router.get('/books', BookController.read);
 router.get('/users', authMiddleware, UserController.index);
 

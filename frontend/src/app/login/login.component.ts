@@ -38,7 +38,6 @@ export class LoginComponent implements OnInit {
     return success;
   }
 
-
   authenticate() {
     if (this.verifyInputs()) {
       this.authSvc.login(this.authentication).subscribe(
