@@ -56,7 +56,7 @@ https://sourceforge.net/projects/wampserver/
 
 ![image](https://user-images.githubusercontent.com/62350674/124849039-68a86980-df74-11eb-8f31-0162bbffebeb.png)
 
-#Rodar a aplicação com o DOCKER
+# Rodar a aplicação com o DOCKER
 
 1: intale o Docker;
 
